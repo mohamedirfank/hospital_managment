@@ -7,6 +7,6 @@ admin.site.register(Department)
 admin.site.register(Docter)
 
 class BookingDetails(admin.ModelAdmin):
-    list_display = ('id','p_name')
+    list_display = ('id','p_name','p_phone', 'p_email', 'doc_name', 'booking_date', 'booking_on')
 
-admin.site.register(Booking)
+admin.site.register(Booking, BookingDetails)
